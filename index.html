@@ -11,6 +11,11 @@
     <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <title>Mazi Lens</title>
 
     <!-- external CSS link -->
@@ -23,15 +28,30 @@
     <header>
         <nav class="navbar">
             <div class="navbar-left">
-                <a href="index.html">
-                    <img src="assets/icons/mazi-lens-logo.png" alt="White Mazi Lens logo">
+                <a href="index.html" class="navbar-brand">
+                    mazi_lens
                 </a>
             </div>
 
             <div class="navbar-right">
+                <a href="#home" class="nav-menu-option active">HOME</a>
+                <a href="#about" class="nav-menu-option">ABOUT</a>
+                <a href="#portfolio" class="nav-menu-option">PORTFOLIO</a>
+                <a href="#services" class="nav-menu-option">SERVICES</a>
+                <a href="#contact" class="nav-menu-option">CONTACT</a>
             </div>
         </nav>
     </header>
+
+    <main>
+
+        <section id="home" class="home">
+            <h2>I'M DAVID OBODOUGO</h2>
+            <h1>videographer and photographer</h1>
+            <a href="#portfolio">SEE MY PORTFOLIO</a>
+        </section>
+
+    </main>
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>

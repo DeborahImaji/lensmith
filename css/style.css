@@ -21,13 +21,81 @@
 /* BASE STYLES
 /*******************************************/
 
-body {}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {}
+
+/* NAVBAR */
+
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5% 4.5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-menu-option.active,
+.nav-menu-option:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-menu-option {
+    font-size: 0.813rem;
+    font-weight: 700;
+    padding: 0.813rem 1.25rem;
+    transition: all 0.15s ease-in-out;
+}
+
+
+/* HOME */
+
+.home {
+    align-items: center;
+    background-image: url('../assets/images/hero-image-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
 
 footer {}
 
