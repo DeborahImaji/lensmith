@@ -29,6 +29,7 @@
 }
 
 body {
+    background: #181818;
     color: #fff;
     font-family: "Montserrat", sans-serif;
 }
@@ -56,29 +57,39 @@ header {}
 
 .navbar {
     align-items: center;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     padding: 1.5% 4.5%;
     position: fixed;
     top: 0;
+    transition: all 0.3s ease;
     width: 100%;
 }
 
+.navbar.scrolled {
+    background: #151515e6;
+}
+
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
-.nav-menu-option.active,
-.nav-menu-option:hover {
+.nav-link.active,
+.nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
 }
 
-.nav-menu-option {
+.nav-link {
     font-size: 0.813rem;
     font-weight: 700;
     padding: 0.813rem 1.25rem;
     transition: all 0.15s ease-in-out;
+}
+
+.hamburger {
+    display: none;
 }
 
 
@@ -97,7 +108,27 @@ header {}
     width: 100%;
 }
 
+#about,
+#portfolio,
+#services,
+#contact {
+    height: 50rem;
+}
+
 footer {}
+
+
+/* FOR TABLETS */
+
+@media screen and (max-width: 992px) {
+    .navbar-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
 
 /******************************************
 /* ADDITIONAL STYLES

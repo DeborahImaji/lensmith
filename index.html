@@ -26,7 +26,7 @@
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-brand">
                     mazi_lens
@@ -34,21 +34,67 @@
             </div>
 
             <div class="navbar-right">
-                <a href="#home" class="nav-menu-option active">HOME</a>
-                <a href="#about" class="nav-menu-option">ABOUT</a>
-                <a href="#portfolio" class="nav-menu-option">PORTFOLIO</a>
-                <a href="#services" class="nav-menu-option">SERVICES</a>
-                <a href="#contact" class="nav-menu-option">CONTACT</a>
+                <a href="#home" class="nav-link active">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#portfolio" class="nav-link">PORTFOLIO</a>
+                <a href="#services" class="nav-link">SERVICES</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
             </div>
+
+            <!-- HAMBURGER MENU -->
+
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li class="mobile-nav-item active"></li>
+                    <li class="mobile-nav-item"></li>
+                    <li class="mobile-nav-item"></li>
+                    <li class="mobile-nav-item"></li>
+                    <li class="mobile-nav-item"></li>
+                </ul>
+            </div>
+            <!-- HAMBURGER MENU -->
         </nav>
     </header>
 
     <main>
 
         <section id="home" class="home">
-            <h2>I'M DAVID OBODOUGO</h2>
+            <h2 id="home-h2">I'M DAVID OBODOUGO</h2>
             <h1>videographer and photographer</h1>
             <a href="#portfolio">SEE MY PORTFOLIO</a>
+        </section>
+
+        <section id="about">
+            <h2>A LITTLE ABOUT ME</h2>
+            <img>
+            <p>
+                Hello! I'm Julia Brailie, a people & portrait photographer. I am very passionate about photography and
+                it becomes quite obvious in the way I create portraits.
+            </p>
+            <p>
+                Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum
+                faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus.
+            </p>
+        </section>
+
+        <section id="portfolio">
+            <h2>SELECTED WORKS</h2>
+        </section>
+
+        <section id="services">
+            <h2>MY SERVICES</h2>
+        </section>
+
+        <section id="contact">
+            <h2>GET IN TOUCH</h2>
         </section>
 
     </main>
