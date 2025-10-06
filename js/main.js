@@ -32,6 +32,13 @@ window.addEventListener('scroll', function () {
             link.classList.add('active');
         }
     });
+
+    mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
 });
 
 // NAVBAR BACKGROUND
@@ -47,4 +54,30 @@ window.addEventListener('scroll', function () {
     } else {
         navbar.classList.remove('scrolled');
     }
+});
+
+
+// MOBILE NAVBAR
+
+// OPEN HAMBURGER
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+function toggleMenu() {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+// MOBILE CLICK INDICATOR
+
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        mobileNavLinks.forEach(nav => nav.classList.remove('active'));
+
+        this.classList.add('active');
+    });
 });
