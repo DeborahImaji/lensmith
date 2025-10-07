@@ -81,3 +81,77 @@ mobileNavLinks.forEach(link => {
         this.classList.add('active');
     });
 });
+
+
+// SLIDESHOW
+
+const homeImages = [
+    'assets/images/portfolio-image1.jpg',
+    'assets/images/portfolio-image2.jpg',
+    'assets/images/portfolio-image3.jpg'
+];
+
+let currentIndex = 0;
+
+const homeSection = document.getElementById('home');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const indicatorsContainer = document.getElementById('indicators');
+
+function createIndicators() {
+    homeImages.forEach((img, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+
+        if (index === 0) dot.classList.add('active');
+
+        dot.addEventListener('click', () => goToSlide(index));
+        indicatorsContainer.appendChild(dot);
+    });
+}
+
+function changeBackground(index) {
+    homeSection.style.backgroundImage = `url('${homeImages[index]}')`;
+    updateIndicators(index);
+}
+
+function updateIndicators(index) {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+        if (i === index) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % homeImages.length;
+    changeBackground(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + homeImages.length) % homeImages.length;
+    changeBackground(currentIndex);
+}
+
+function goToSlide(index) {
+    currentIndex = index;
+    changeBackground(currentIndex);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+let autoplayInterval = setInterval(nextSlide, 5000);
+
+homeSection.addEventListener('mouseenter', () => {
+    clearInterval(autoplayInterval);
+});
+
+homeSection.addEventListener('mouseleave', () => {
+    autoplayInterval = setInterval(nextSlide, 5000);
+});
+
+createIndicators();
