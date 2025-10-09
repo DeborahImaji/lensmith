@@ -322,7 +322,13 @@ footer {}
     }
 
     .home-h1 {
+        margin: 8.5% 0% 13.5% 0%;
         max-width: 90%;
+    }
+
+    .home-link {
+        font-size: 1rem;
+        padding: 3.5% 6%;
     }
 }
 
