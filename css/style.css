@@ -72,7 +72,7 @@ header {}
 }
 
 .navbar-brand {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
@@ -142,7 +142,7 @@ header {}
 }
 
 .mobile-menu.active {
-    top: 4rem;
+    top: 6rem;
 }
 
 .mobile-menu ul {
@@ -201,7 +201,7 @@ header {}
     border: none;
     color: #fff;
     cursor: pointer;
-    font-size: 6.5rem;
+    font-size: 6rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -214,15 +214,15 @@ header {}
 }
 
 .arrow-left {
-    left: 2rem;
+    left: 1.5rem;
 }
 
 .arrow-right {
-    right: 2rem;
+    right: 1.5rem;
 }
 
 .indicators {
-    bottom: 2rem;
+    bottom: 1.5rem;
     display: flex;
     gap: 0.5rem;
     left: 50%;
@@ -244,6 +244,35 @@ header {}
     background: #fff;
 }
 
+.home-h2 {
+    font-size: 1.1rem;
+    font-weight: 650;
+    letter-spacing: 0.125rem;
+}
+
+.home-h1 {
+    font-size: 3.25rem;
+    font-weight: 700;
+    margin: 2.5% 0% 5% 0%;
+    max-width: 70%;
+    text-align: center;
+}
+
+.home-link {
+    background-color: #fff;
+    border-radius: 3.125rem;
+    box-shadow: 0.313rem 0.313rem 0.625rem -0.125rem rgba(0, 0, 0, 0.50);
+    color: #404040;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 1.4% 2.3%;
+    transition: all 0.2s ease-in-out;
+}
+
+.home-link:hover {
+    box-shadow: 0.625rem 0.625rem 1.313rem -0.25rem rgba(0, 0, 0, 0.75);
+}
+
 #about,
 #portfolio,
 #services,
@@ -257,6 +286,9 @@ footer {}
 /* FOR TABLETS */
 
 @media screen and (max-width: 992px) {
+    html {
+        font-size: 80%;
+    }
 
     /* HAMBURGER MENU */
     .navbar,
@@ -270,6 +302,27 @@ footer {}
 
     .hamburger {
         display: flex;
+    }
+}
+
+
+/* FOR PHONES */
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 70%;
+    }
+
+    .mobile-menu.active {
+        top: 4rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .home-h1 {
+        max-width: 90%;
     }
 }
 
