@@ -273,7 +273,40 @@ header {}
     box-shadow: 0.625rem 0.625rem 1.313rem -0.25rem rgba(0, 0, 0, 0.75);
 }
 
-#about,
+
+/* ABOUT */
+
+.about,
+.portfolio,
+.services,
+.contact {
+    padding: 6.25rem 4rem;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.section-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 3rem 0;
+    text-align: center;
+}
+
+.about-image {
+    max-width: 40%;
+}
+
+.about-desc-short {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
 #portfolio,
 #services,
 #contact {
@@ -286,7 +319,7 @@ footer {}
 /* FOR TABLETS */
 
 @media screen and (max-width: 992px) {
-    html {
+    .home {
         font-size: 80%;
     }
 
@@ -303,13 +336,23 @@ footer {}
     .hamburger {
         display: flex;
     }
+
+    .about-wrapper {
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .about-image {
+        max-width: 65%;
+    }
 }
 
 
 /* FOR PHONES */
 
 @media screen and (max-width: 500px) {
-    html {
+    .home {
         font-size: 70%;
     }
 
@@ -329,6 +372,17 @@ footer {}
     .home-link {
         font-size: 1rem;
         padding: 3.5% 6%;
+    }
+
+    .about,
+    .portfolio,
+    .services,
+    .contact {
+        padding: 6.25rem 1.25rem;
+    }
+
+    .about-image {
+        max-width: 100%;
     }
 }
 
