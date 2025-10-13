@@ -28,10 +28,21 @@
     font-style: normal;
 }
 
+.league-spartan {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 body {
     background: #181818;
     color: #fff;
     font-family: "Montserrat", sans-serif;
+}
+
+section {
+    border-bottom: 0.03rem solid #777;
 }
 
 h1,
@@ -305,9 +316,80 @@ header {}
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 2rem;
+    margin-bottom: 1.6rem;
 }
 
-#portfolio,
+.about-desc-long {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 350;
+    line-height: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-social-div a {
+    padding: 0% 0.75%;
+}
+
+.about-social-icon {
+    fill: #fff;
+    transition: all 0.3s ease-in-out;
+    width: 4%;
+}
+
+.about-social-icon:hover {
+    fill: #ababab;
+}
+
+
+/* ABOUT BREAK */
+
+.about-break {
+    align-items: center;
+    background-image: url('../assets/images/about-break-image.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 -17.5rem 17.5rem rgba(0, 0, 0, 0.792);
+    display: flex;
+    height: 26.5rem;
+    justify-content: center;
+}
+
+.about-break h3 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    max-width: 55%;
+    text-align: center;
+}
+
+
+/* PORTFOLIO */
+
+.portfolio-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-nav li {
+    margin: 0 0.625rem 0.625rem 0.625rem;
+}
+
+.portfolio-nav a {
+    cursor: pointer;
+    font-size: 0.813rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.portfolio-nav a.active,
+.portfolio-nav a:hover {
+    color: #98bec8;
+}
+
 #services,
 #contact {
     height: 50rem;
@@ -319,9 +401,6 @@ footer {}
 /* FOR TABLETS */
 
 @media screen and (max-width: 992px) {
-    .home {
-        font-size: 80%;
-    }
 
     /* HAMBURGER MENU */
     .navbar,
@@ -346,14 +425,24 @@ footer {}
     .about-image {
         max-width: 65%;
     }
+
+    .about-break h3 {
+        max-width: 75%;
+    }
 }
 
 
 /* FOR PHONES */
 
 @media screen and (max-width: 500px) {
-    .home {
-        font-size: 70%;
+
+    .navbar,
+    .hamburger {
+        padding: 5% 5%;
+    }
+
+    .navbar-brand {
+        font-size: 1.75rem;
     }
 
     .mobile-menu.active {
@@ -364,25 +453,38 @@ footer {}
         display: none;
     }
 
+    .home-h2 {
+        font-size: 0.95rem;
+    }
+
     .home-h1 {
+        font-size: 2rem;
         margin: 8.5% 0% 13.5% 0%;
-        max-width: 90%;
+        max-width: 92.5%;
     }
 
     .home-link {
-        font-size: 1rem;
-        padding: 3.5% 6%;
+        font-size: 0.65rem;
+        padding: 4% 6%;
     }
 
     .about,
     .portfolio,
     .services,
     .contact {
-        padding: 6.25rem 1.25rem;
+        padding: 6.25rem 1.5rem;
     }
 
     .about-image {
         max-width: 100%;
+    }
+
+    .about-break {
+        height: 33rem;
+    }
+
+    .about-break h3 {
+        max-width: 95%;
     }
 }
 
