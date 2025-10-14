@@ -378,6 +378,21 @@ header {}
     margin: 0 0.625rem 0.625rem 0.625rem;
 }
 
+.portfolio-nav li::after {
+    background: #ffffff4d;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-left: 1.063rem;
+    height: 0.188rem;
+    vertical-align: middle;
+    width: 0.188rem;
+}
+
+.portfolio-nav li:last-child::after {
+    display: none;
+}
+
 .portfolio-nav a {
     cursor: pointer;
     font-size: 0.813rem;
@@ -388,6 +403,11 @@ header {}
 .portfolio-nav a.active,
 .portfolio-nav a:hover {
     color: #98bec8;
+}
+
+.gallery img {
+    width: 30%;
+    /* Remove later */
 }
 
 #services,
@@ -485,6 +505,10 @@ footer {}
 
     .about-break h3 {
         max-width: 95%;
+    }
+
+    .portfolio-nav {
+        flex-wrap: wrap;
     }
 }
 
