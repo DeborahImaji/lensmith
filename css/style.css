@@ -405,9 +405,67 @@ header {}
     color: #98bec8;
 }
 
-.gallery img {
-    width: 30%;
-    /* Remove later */
+.gallery {
+    display: grid;
+    gap: 1.15rem 1.2rem;
+    grid-auto-rows: 0.625rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.gallery-item img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.gallery-item:nth-child(1) {
+    grid-row: span 20;
+}
+
+.gallery-item:nth-child(2) {
+    grid-row: span 17;
+}
+
+.gallery-item:nth-child(3) {
+    grid-row: span 19;
+}
+
+.gallery-item:nth-child(4) {
+    grid-row: span 20;
+}
+
+.gallery-item:nth-child(5) {
+    grid-row: span 20;
+}
+
+.gallery-item:nth-child(6) {
+    grid-row: span 11;
+}
+
+.gallery-item:nth-child(7) {
+    grid-row: span 20;
+}
+
+.gallery-item:nth-child(8) {
+    grid-row: span 10;
+}
+
+.gallery-item:nth-child(9) {
+    grid-row: span 10;
+}
+
+.gallery-item:nth-child(10) {
+    grid-row: span 20;
+}
+
+.gallery-item:nth-child(11) {
+    grid-row: span 20;
+}
+
+.gallery-item:nth-child(12) {
+    grid-row: span 10;
 }
 
 #services,
