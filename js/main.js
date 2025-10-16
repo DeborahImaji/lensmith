@@ -155,3 +155,29 @@ homeSection.addEventListener('mouseleave', () => {
 });
 
 createIndicators();
+
+
+// PORTFOLIO
+
+const categoryLinks = document.querySelectorAll('.por-nav-link');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+categoryLinks.forEach(link => {
+    link.addEventListener('click', function () {
+
+        categoryLinks.forEach(lnk => lnk.classList.remove('active'));
+        this.classList.add('active');
+
+        const selectedCategory = this.getAttribute('data-category');
+
+        galleryItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+
+            if (selectedCategory === 'all' || itemCategory.includes(selectedCategory)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});

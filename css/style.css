@@ -370,7 +370,7 @@ header {}
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
+    margin: 0% 0% 2.5% 0%;
     padding: 0;
 }
 
@@ -517,6 +517,20 @@ footer {}
 
     .portfolio-nav {
         flex-wrap: wrap;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .gallery-item {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .gallery-item img {
+        width: 60%;
     }
 }
 
