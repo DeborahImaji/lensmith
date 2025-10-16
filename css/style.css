@@ -418,6 +418,64 @@ header {}
     max-width: 100%;
 }
 
+.lightbox {
+    align-items: center;
+    /* display: none; */
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 9999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.lightbox-content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-height: 90%;
+    max-width: 95%;
+    position: relative;
+    z-index: 2;
+}
+
+.lightbox-image {
+    max-height: 90vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 4rem;
+    height: 2.5rem;
+    line-height: 1;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 1.25rem;
+    width: 2.5rem;
+    z-index: 3;
+}
+
 #services,
 #contact {
     height: 50rem;
