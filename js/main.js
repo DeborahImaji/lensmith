@@ -159,6 +159,7 @@ createIndicators();
 
 // PORTFOLIO
 
+// FILTERING
 const categoryLinks = document.querySelectorAll('.por-nav-link');
 const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -180,4 +181,75 @@ categoryLinks.forEach(link => {
             }
         });
     });
+});
+
+// LIGHTBOX
+const expandButtons = document.querySelectorAll('.gallery-expand');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxCounter = document.querySelector('.lightbox-counter');
+
+let lightboxCurrentIndex = 0;
+
+expandButtons.forEach((lightboxButton, lightboxIndex) => {
+    lightboxButton.addEventListener('click', function () {
+        lightboxCurrentIndex = lightboxIndex;
+        openLightbox();
+        updateLightboxImage();
+    });
+});
+
+function openLightbox() {
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxImage() {
+    const lightboxCurrentItem = galleryItems[lightboxCurrentIndex];
+    const lightboxCurrentImg = lightboxCurrentItem.querySelector('img');
+
+    lightboxImage.src = lightboxCurrentImg.src;
+    lightboxImage.alt = lightboxCurrentImg.alt;
+
+    lightboxCounter.textContent = `${lightboxCurrentIndex + 1} / ${galleryItems.length}`;
+}
+
+const lightboxNextBtn = document.querySelector('.lightbox-next');
+const lightboxPrevBtn = document.querySelector('.lightbox-prev');
+
+lightboxNextBtn.addEventListener('click', function () {
+    lightboxCurrentIndex++;
+
+    if (lightboxCurrentIndex >= galleryItems.length) {
+        lightboxCurrentIndex = 0;
+    }
+
+    updateLightboxImage();
+});
+
+lightboxPrevBtn.addEventListener('click', function () {
+    lightboxCurrentIndex--;
+
+    if (lightboxCurrentIndex < 0) {
+        lightboxCurrentIndex = galleryItems.length - 1;
+    }
+
+    updateLightboxImage();
+});
+
+const lightboxCloseBtn = document.querySelector('.lightbox-close');
+const lightboxBackdrop = document.querySelector('.lightbox-backdrop');
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+lightboxCloseBtn.addEventListener('click', closeLightbox);
+lightboxBackdrop.addEventListener('click', closeLightbox);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+    }
 });
