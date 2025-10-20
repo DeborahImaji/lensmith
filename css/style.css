@@ -564,6 +564,45 @@ header {}
     z-index: 3;
 }
 
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    background: none;
+    margin: 0 0.625rem;
+    min-width: calc(33.333% - 1.25rem);
+    overflow: hidden;
+}
+
+.carousel-item img {
+    display: block;
+    height: 31rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 3.125rem;
+}
+
+.carousel-btn.next {
+    right: 3.125rem;
+}
+
 #services,
 #contact {
     height: 50rem;
