@@ -634,6 +634,34 @@ header {}
     box-shadow: inset 0 -17.5rem 17.5rem rgba(0, 0, 0, 0.792);
 }
 
+.break-container {
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 7.5rem;
+}
+
+.break-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.break-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.quote-slide {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    text-align: center;
+}
+
+.quote-slide h4 {
+    font-size: 7.5rem;
+}
+
 #services,
 #contact {
     height: 50rem;
