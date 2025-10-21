@@ -253,3 +253,57 @@ document.addEventListener('keydown', function (e) {
         closeLightbox();
     }
 });
+
+// CAROUSEL
+
+const carouselTrack = document.getElementById('carouselTrack');
+const carouselPrevBtn = document.getElementById('carousel-prevBtn');
+const carouselNextBtn = document.getElementById('carousel-nextBtn');
+const carouselItems = document.querySelectorAll('.carousel-item');
+
+const carouselTotalItems = carouselItems.length;
+let carouselCurrentIndex = 0;
+
+function carouselGetVisibleItems() {
+    const carouselWidth = window.innerWidth;
+    if (carouselWidth <= 500) return 1;
+    if (carouselWidth <= 992) return 2;
+    return 3;
+}
+
+function updateCarousel() {
+    const carouselItemsVisible = carouselGetVisibleItems();
+    const carouselMaxIndex = carouselTotalItems - carouselItemsVisible;
+
+    if (carouselCurrentIndex > carouselMaxIndex) {
+        carouselCurrentIndex = carouselMaxIndex;
+    }
+
+    const carouselItemWidth = carouselItems[0].offsetWidth;
+    const carouselGap = 20;
+    const carouselSlideDistance = (carouselItemWidth + carouselGap) * carouselCurrentIndex;
+
+    carouselTrack.style.transform = `translateX(-${carouselSlideDistance}px)`;
+
+    carouselPrevBtn.disabled = carouselCurrentIndex === 0;
+    carouselNextBtn.disabled = carouselCurrentIndex === carouselMaxIndex;
+}
+
+carouselPrevBtn.addEventListener('click', () => {
+    if (carouselCurrentIndex > 0) {
+        carouselCurrentIndex--;
+        updateCarousel();
+    }
+});
+
+carouselNextBtn.addEventListener('click', () => {
+    const carouselMaxIndex = carouselTotalItems - carouselGetVisibleItems();
+    if (carouselCurrentIndex < carouselMaxIndex) {
+        carouselCurrentIndex++;
+        updateCarousel();
+    }
+});
+
+window.addEventListener('resize', updateCarousel);
+
+updateCarousel();
