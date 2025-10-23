@@ -658,6 +658,37 @@ header {}
     text-align: center;
 }
 
+.quote-slide img {
+    margin: 2.5% 0%;
+    width: 8%;
+}
+
+.quote-slide p {
+    font-size: 1.375rem;
+    font-style: italic;
+    font-weight: 450;
+    margin-bottom: 2.5%;
+}
+
+.quote-slide span {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.break-dots-container {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.break-dot {
+    background: #FFFFFF80;
+    border-radius: 50%;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
 #services,
 #contact {
     height: 50rem;
