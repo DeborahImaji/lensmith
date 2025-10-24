@@ -701,7 +701,23 @@ header {}
     background: #FFF;
 }
 
-#services,
+
+/* SERVICES */
+
+.services-heading {
+    margin-bottom: 1.25rem;
+}
+
+.services-desc {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 350;
+    line-height: 1.75rem;
+    margin: 0 auto 1.5rem auto;
+    max-width: 90%;
+    text-align: center;
+}
+
 #contact {
     height: 50rem;
 }
@@ -752,6 +768,10 @@ footer {}
     .break-container {
         max-width: 80%;
         padding: 6rem 0;
+    }
+
+    .services-desc {
+        max-width: 100%;
     }
 }
 
