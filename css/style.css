@@ -667,6 +667,7 @@ header {}
     font-size: 1.375rem;
     font-style: italic;
     font-weight: 450;
+    line-height: 1.6rem;
     margin-bottom: 2.5%;
 }
 
@@ -747,6 +748,11 @@ footer {}
     .carousel-item {
         min-width: calc(50% - 1.25rem);
     }
+
+    .break-container {
+        max-width: 80%;
+        padding: 6rem 0;
+    }
 }
 
 
@@ -825,6 +831,20 @@ footer {}
 
     .carousel-item {
         min-width: calc(100% - 1.25rem);
+    }
+
+    .break-container {
+        max-width: 85%;
+        padding: 5rem 0;
+    }
+
+    .quote-slide img {
+        width: 12.5%;
+    }
+
+    .quote-slide p {
+        font-size: 1.1rem;
+        margin-bottom: 5%;
     }
 }
 

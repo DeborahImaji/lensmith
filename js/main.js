@@ -307,3 +307,55 @@ carouselNextBtn.addEventListener('click', () => {
 window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
+
+
+// PORTFOLIO BREAK
+
+const breakTrack = document.getElementById('breakTrack');
+const breakDots = document.querySelectorAll('.break-dot');
+const breakSlides = document.querySelectorAll('.quote-slide');
+
+const totalBreakSlides = breakSlides.length;
+let currentBreakIndex = 0;
+const breakAutoPlayInterval = 6000;
+
+function updateBreakSlideshow() {
+    const breakSlideWidth = breakSlides[0].offsetWidth;
+    const breakSlideDistance = breakSlideWidth * currentBreakIndex;
+
+    breakTrack.style.transform = `translateX(-${breakSlideDistance}px)`;
+
+    breakDots.forEach((breakDot, breakIndex) => {
+        if (breakIndex === currentBreakIndex) {
+            breakDot.classList.add('active');
+        } else {
+            breakDot.classList.remove('active');
+        }
+    });
+}
+
+function breakAutoPlay() {
+    currentBreakIndex++;
+
+    if (currentBreakIndex >= totalBreakSlides) {
+        currentBreakIndex = 0;
+    }
+
+    updateBreakSlideshow();
+}
+
+let breakAutoPlayTimer = setInterval(breakAutoPlay, breakAutoPlayInterval);
+
+breakDots.forEach((breakDot, breakIndex) => {
+    breakDot.addEventListener('click', () => {
+        currentBreakIndex = breakIndex;
+        updateBreakSlideshow();
+
+        clearInterval(breakAutoPlayTimer);
+        breakAutoPlayTimer = setInterval(breakAutoPlay, breakAutoPlayInterval);
+    })
+});
+
+window.addEventListener('resize', updateBreakSlideshow);
+
+updateBreakSlideshow();
