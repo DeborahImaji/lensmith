@@ -1,2 +1,2 @@
-# mazi-lens
-The first release of David Obodougo's portfolio website for Mazi Lens
+# lensmith
+The first release of Mandy Smith's portfolio website for Lensmith
