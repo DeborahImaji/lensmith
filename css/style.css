@@ -290,8 +290,7 @@ header {}
 
 .about,
 .portfolio,
-.services,
-.contact {
+.services {
     padding: 6.25rem 4rem;
 }
 
@@ -774,8 +773,38 @@ header {}
     text-align: center;
 }
 
-#contact {
-    height: 50rem;
+
+/* CONTACT */
+
+.contact {
+    padding: 6.25rem 15rem;
+}
+
+.contact-heading {
+    margin: 0 0 2rem 0;
+}
+
+.contact-desc {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+.contact-triplets {
+    margin: 5% 0%;
+}
+
+.contact-triplets div {
+    text-align: center;
+}
+
+.contact-triplets svg {
+    fill: #FFF;
+    width: 4rem;
+}
+
+.contact-triplets p {
+    font-size: 0.9rem;
 }
 
 footer {}
@@ -832,6 +861,14 @@ footer {}
 
     .service-image {
         height: 15rem;
+    }
+
+    .contact {
+        padding: 6.25rem 3rem;
+    }
+
+    .contact-heading {
+        margin: 0 0 1.5rem 0;
     }
 }
 
@@ -954,8 +991,6 @@ footer {}
         font-size: 1.05rem;
         line-height: 1.9rem;
     }
-
-    .services-break h3 {}
 }
 
 /******************************************
