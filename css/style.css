@@ -791,7 +791,9 @@ header {}
 }
 
 .contact-triplets {
-    margin: 5% 0%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5.5% 0%;
 }
 
 .contact-triplets div {
@@ -800,10 +802,40 @@ header {}
 
 .contact-triplets svg {
     fill: #FFF;
+    height: 4rem;
+    margin-bottom: 4%;
     width: 4rem;
 }
 
 .contact-triplets p {
+    font-size: 0.95rem;
+    margin-bottom: 2.5%;
+}
+
+.contact-form-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact-form-top div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    width: 50%;
+}
+
+.contact-form input {
+    background: #181818;
+    border: 0.04rem solid #777;
+    border-radius: 0.4rem;
+    padding: 3.5% 4%;
+    width: 100%;
+}
+
+.contact-form input::placeholder {
+    color: #cdcdcd;
     font-size: 0.9rem;
 }
 
@@ -990,6 +1022,19 @@ footer {}
     .service-wrapper p {
         font-size: 1.05rem;
         line-height: 1.9rem;
+    }
+
+    .contact-triplets {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-form-top {
+        flex-direction: column;
+    }
+
+    .contact-form-top div {
+        width: 100%;
     }
 }
 
