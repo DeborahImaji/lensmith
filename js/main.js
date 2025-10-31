@@ -86,9 +86,9 @@ mobileNavLinks.forEach(link => {
 // SLIDESHOW
 
 const homeImages = [
-    'assets/images/portfolio-image1.jpg',
-    'assets/images/portfolio-image2.jpg',
-    'assets/images/portfolio-image3.jpg'
+    'assets/images/general/portfolio-image1.jpg',
+    'assets/images/general/portfolio-image2.jpg',
+    'assets/images/general/portfolio-image3.jpg'
 ];
 
 let currentIndex = 0;
