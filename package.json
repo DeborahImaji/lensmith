@@ -1,0 +1,25 @@
+{
+  "name": "lensmith",
+  "version": "1.0.0",
+  "description": "The first release of Mandy Smith's portfolio website for Lensmith",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx clean-css-cli -o css/style.min.css css/style.css && npx terser js/main.js -o js/main.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeborahImaji/mazi-lens.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeborahImaji/mazi-lens/issues"
+  },
+  "homepage": "https://github.com/DeborahImaji/mazi-lens#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.44.0"
+  }
+}
